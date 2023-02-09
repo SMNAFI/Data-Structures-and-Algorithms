@@ -11,7 +11,7 @@
 class TrieNode {
 public:
     unordered_map<char, TrieNode*> children;
-    bool word_ = false;
+    bool isWord = false;
 };
 
 class Trie {
@@ -29,7 +29,7 @@ public:
             curr = curr->children[c];
         }
         // end of the word
-        curr->word_ = true;
+        curr->isWord = true;
     }
 
     bool search(string word) {
@@ -42,7 +42,7 @@ public:
             curr = curr->children[c];
         }
         // curr->word returns true if we reach the end of the word
-        return curr->word_;
+        return curr->isWord;
     }
 
     bool startsWith(string prefix) {

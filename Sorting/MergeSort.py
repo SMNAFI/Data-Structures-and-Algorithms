@@ -1,5 +1,9 @@
-# Time: O(N log N)
-# Space: O(N)
+# Time: Best case-> O(nlog(n))
+#       Worst case-> O(nlog(n))
+#       Average case-> O(nlog(n))
+# Space: O(n)
+# Stable: YES
+
 def mergeSort(arr, s, e):
     if s == e:
         return arr
